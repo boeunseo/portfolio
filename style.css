@@ -165,8 +165,12 @@ p {
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px;
   margin: auto; 
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* About */
@@ -200,7 +204,8 @@ p {
   transform: rotate(-30deg) scale(1.1);
 }
 
-.major__title, .major__description {
+.major__title, 
+.major__description {
   color: var(--color-dark-grey);
 }
 
@@ -223,7 +228,8 @@ p {
   text-align: left;
 }
 
-.job__name, .job__period {
+.job__name, 
+.job__period {
   color: var(--color-light-grey);
 }
 
@@ -233,4 +239,61 @@ p {
 
 .job__period {
   font-size: var(--font-micro);
+}
+
+/* Skill */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  /* width: 70%; */
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
