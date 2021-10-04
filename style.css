@@ -4,6 +4,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
+  --color-light-pink: #ffb1cd;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
@@ -12,6 +13,7 @@
   --color-green: #88bf6d;
   --color-dark-green: #78a86c;
   --color-blue: #73aace;
+  --color-dark-blue: #5391be;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -103,7 +105,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-green);
+  background-color: var(--color-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -131,13 +133,13 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-green);
+  background-color: var(--color-dark-blue);
 }
 
 /* Home */
 #home {
   background: url(imgs/home-background.png) center/cover no-repeat;
-  background-color: var(--color-green);
+  background-color: var(--color-blue);
   padding: 40px;
   text-align: center;
 }
@@ -258,7 +260,7 @@ p {
 }
 
 .skillset__title {
-  color: var(--color-white);
+  color: var(--color-light-pink);
 }
 
 .skillset__left {
