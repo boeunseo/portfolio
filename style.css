@@ -104,12 +104,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -140,7 +149,7 @@ p {
 .navbar__toggle-btn {
   position: absolute;
   top: 18px;
-  right: 32px;
+  right: 18px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -151,6 +160,7 @@ p {
   /* background: url(imgs/home-background.png) center/cover no-repeat; */
   background-color: var(--color-blue);
   padding: 40px;
+  padding-top: 140px;
   text-align: center;
 }
 
