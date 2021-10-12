@@ -110,7 +110,7 @@ p {
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 8px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;

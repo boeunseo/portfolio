@@ -21,9 +21,23 @@ navbarMenu.addEventListener('click', event => {
     return
   }
 
-  const scrollTo = document.querySelector(link);
-  const top = scrollTo.offsetTop - navbarHeight < 0 ? 0 : scrollTo.offsetTop - navbarHeight;  
+  scrollIntoView(link); 
+})
 
-  scrollTo.scrollIntoView({behavior: "smooth"});
-  
-} )
+// Handle scrolling when click on the "Contact Me" button
+const contactmeBtn = document.querySelector('.home__contact');
+contactmeBtn.addEventListener( 'click', () => {
+  scrollIntoView('#contact');
+})
+
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  const offsetPosition = scrollTo.offsetTop - navbarHeight < 0 ? 0 : scrollTo.offsetTop - navbarHeight;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  })    
+  // scrollTo.scrollIntoView({ behavior: "smooth" });
+}
