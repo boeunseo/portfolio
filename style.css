@@ -160,9 +160,11 @@ p {
   /* background: url(imgs/home-background.png) center/cover no-repeat; */
   background-color: var(--color-blue);
   padding: 40px;
-  padding-top: 140px;
+  padding-top: 180px;
   text-align: center;
+  transition: all var(--animation-duration) ease-in-out;
 }
+
 
 .home__avatar {
   width: 250px;
