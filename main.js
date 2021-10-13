@@ -34,10 +34,23 @@ contactmeBtn.addEventListener( 'click', () => {
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 
+const arrowUp = document.querySelector('.arrow-up');
+
 document.addEventListener('scroll', () => {
-  home.style.opacity = 1 - window.scrollY/homeHeight ;
+  home.style.opacity = (1 - window.scrollY/homeHeight)*1.5 ;
+
+  // Up-arrow for Scrolling upside
+  if(window.scrollY > homeHeight/2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
 })
 
+// Handle click on the "Arrow up" button
+arrowUp.addEventListener( 'click', () => {
+  scrollIntoView('#home');
+})
 
 
 function scrollIntoView(selector) {

@@ -5,7 +5,7 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-light-pink: #ffb1cd;
-  --color-pink: #fe918d;
+  --color-pink: #fe919d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
@@ -110,7 +110,7 @@ p {
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
-  padding: 8px;
+  padding: 16px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -118,7 +118,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-blue);
-  padding: 8px;
+  padding: 16px;
 }
 
 .navbar__menu {
@@ -162,7 +162,6 @@ p {
   padding: 40px;
   padding-top: 180px;
   text-align: center;
-  transition: all var(--animation-duration) ease-in-out;
 }
 
 
@@ -491,13 +490,35 @@ p {
   color: var(--color-blue);
 } 
 
+/* Arrow Up */
+.arrow-up {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  font-size: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrow__image {
+  width: 70px;
+  height: 70px;
+}
+
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
   }
   #navbar {
-    flex-direction: column;
+    flex-direction: flex;
     align-items: flex-start;
   }
 
